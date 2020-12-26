@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "ClassSelector";
+}
+<h2>ClassSelector</h2>
+<script>
+    $(document).ready(function () {
+        //Selects all elements with class "small" and sets 5px solid red border
+        //$(".small").css("border", "5px solid red");
+
+        //Selects all elements with class "small" and all span elements with class "big" and sets 5px solid red border
+        //$(".small,span.big").css("border", "5px solid red");
+
+        //Selects all elements with class small that are nested in a an element with id = div2 and sets 5px solid red border
+       // $("#div2 .small").css("border", "5px solid red");
+
+        //Selects all elements with class small and sets 5px solid red border.Notice div1 has 2 classes - small and big.
+        //$(".small").css("border", "5px solid red");
+
+        //Selects all elements that has both the classes - small and big.There should be no space between the class names. 
+       // $(".small.big").css("border", "5px solid red");
+
+        //If you have a space between the two class names then we are trying to find descendants, i.e.find elements
+        //with class big that are nested of an element which has id div2.
+        //$("#div2 .small").css("border", "5px solid red");
+
+        //find the element that has both the classes small and big
+        $(".big").filter(".small").css("border", "5px solid red");
+
+    });
+</script>
+
+<div id="div2">
+    <span class="small">
+        Span small
+    </span>
+    <br />
+    <span class="big">
+        Span big
+    </span>
+</div>
+
+<br />
+<br />
+<div id="div1" class="small big">
+    Div 1
+</div>
+<br />
+<span class="big">
+    Span 2
+</span>
+<p class="big">This is a paragraph</p>
+
+

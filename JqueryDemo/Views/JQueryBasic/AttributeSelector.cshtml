@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AttributeSelector";
+}
+
+<h2>AttributeSelector</h2>
+
+<script>
+    //Selects all elements with title attribute and sets 5px solid red border
+    $(document).ready(function () {
+        $("[title]").css("border", "5px solid red");
+    });
+</script>
+<div title="div1Title">
+    DIV 1
+</div>
+<br />
+<div title="div2Title">
+    DIV 2
+</div>
+<p title="pTitle">
+    This is a paragraph
+</p>
+<span title="div1Title">
+    SAPN 1
+</span>
+<br />
+<br />
+<span>
+    SPAN 2
+</span>
+
+

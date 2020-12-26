@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "IdSelector";
+}
+
+<h2>IdSelector</h2>
+<script>
+    $(document).ready(function () {
+    if ($("#btnClickMe").length > 0) {
+        var btnClickMe = $("#btnClickMe");
+
+        btnClickMe.click(function () {
+            alert("btnClickMe id is found");
+            btnClickMe.css("background-color", "Yellow");
+        });
+    }
+    else {
+        alert("id is not found");
+        }
+    });
+</script>
+<input type="button" value="Click Me" id="btnClickMe" />
+

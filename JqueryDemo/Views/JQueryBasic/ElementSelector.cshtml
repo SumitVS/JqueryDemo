@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "ElementSelector";
+}
+<script>
+//Alerts the total count of td elements on the page
+    $(document).ready(function () {
+        //alert("Totoal No of TD's are = " + $("td").length);
+
+        //Selects all the tr elements on the page and changes their background colour to red
+        //$("tr").css("background-color", "red");
+
+        //Alerts the HTML content of the table
+        //alert($("table").html());
+
+        //Alerts the HTML content of each table row
+        //$("tr").each(function () {
+        //    alert($(this).html());
+        //});
+
+        //Select and changes the background colour of all the div, span and anchor elements
+        //$("div, span, a").css("background-color", "red");
+
+        //Select and changes the background colour of all the div, span and anchor elements
+        //$("div a").css("background-color", "red");
+
+        //Changes the background color of even rows to gray and odd rows to yellow on both the tables.
+        $("#table1 tr:even").css("background-color", "gray");
+        $("#table1 tr:odd").css("background-color", "yellow");
+       
+    });
+    </script>
+<h2>ElementSelector</h2>
+<table id="table1" border="1">
+    <tr>
+        <td>C#</td>
+        <td>ASP.NET</td>
+        <td>SQL Server</td>
+    </tr>
+    <tr>
+        <td>ADO.NET</td>
+        <td>jQuery</td>
+        <td>JavaScript</td>
+    </tr>
+    <tr>
+        <td>AJAX</td>
+        <td>CSS</td>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td>VB</td>
+        <td>Dot NET</td>
+        <td>Visual C++</td>
+    </tr>
+    <tr>
+        <td>Oracle</td>
+        <td>Java</td>
+        <td>J2EE</td>
+    </tr>
+</table>
+<table id="table2" border="1">
+    <tr>
+        <td>Mark</td>
+        <td>Mary</td>
+        <td>Mike</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Jade</td>
+        <td>Joy</td>
+    </tr>
+    <tr>
+        <td>Rob</td>
+        <td>Roy</td>
+        <td>Rachel</td>
+    </tr>
+    <tr>
+        <td>Sam</td>
+        <td>Sara</td>
+        <td>Smith</td>
+    </tr>
+    <tr>
+        <td>Todd</td>
+        <td>Tom</td>
+        <td>Theo</td>
+    </tr>
+</table>
+<br />
+<br />
+<div>
+    DIV 1
+    <br />
+    <span>
+        <a href="http://pragimtech.com">PragimTech</a>
+    </span>
+</div>
+<br />
+<br />
+<a href="http://google.com">Google</a>
+<br />
+<br />
+<div>DIV 2</div>
+<br />
+<br />
+<span>SPAN 1</span>
+<br />
+<br />
+<div>DIV 3</div>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ShowImageHeightWidth";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="Scripts/jquery-3.4.1.min.js"><\/script>')       
+</script>
+
+<h2>ShowImageHeightWidth</h2>
+<div id="div1"></div>
+<img src="~/Content/Images/images.jpg" alt="Stylish Girl" id="ImgGirl"/>
+<script>
+    $(document).ready(function () {
+        $("#div1").html('using Document.ready Height= ' + $("#ImgGirl").height() + '</br> Width= ' + $("#ImgGirl").width());
+    });
+   
+
+    $(window).on("load", function () {
+        $("#div1").append('</br>using Window.load Height= ' + $("#ImgGirl").height() + ' </br> Width= ' + $("#ImgGirl").width());
+    });
+</script>
+
