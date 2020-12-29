@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "each";
+}
+
+<h2>each</h2>
+<script>
+    $(document).ready(function () {
+        //Select all li elements and show its index positions and text
+        var resultStirng = "";
+        $("#countryList li").each(function (index, element) {
+            if ($(element).text() == "UK") {
+                return false;
+            }
+            resultStirng += "Index= " + index + " Value= " + $(element).text() + "</br>";
+        });
+        $("#divResult").html(resultStirng);
+    });
+</script>
+
+<ul id="countryList">
+    <li>US</li>
+    <li>India</li>
+    <li>UK</li>
+    <li>Nepal</li>
+    <li>Italy</li>
+</ul>
+<div id="divResult"></div>
+

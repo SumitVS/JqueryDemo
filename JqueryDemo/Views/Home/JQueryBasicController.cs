@@ -33,5 +33,50 @@ namespace JqueryDemo.Views.Home
         {
             return View();
         }
+
+        public ActionResult AttributeValueSelector()
+        {
+            return View();
+        }
+
+        public ActionResult CaseInsensitiveAttributeValueSelector()
+        {
+            return View();
+        }
+        public ActionResult InputSelector()
+        {
+            return View();
+        }
+
+        public ActionResult CheckedSelector()
+        {
+            return View();
+        }
+
+        public ActionResult CheckboxGroupSelector()
+        {
+            return View();
+        }
+
+        public ActionResult SelectedSelector()
+        {
+            return View();
+        }
+
+        public ActionResult DisabledEnabledSelector()
+        {
+            return View();
+        }
+
+        public ActionResult each()
+        {
+            return View();
+        }
+
+        public ActionResult MethodChaining()
+        {
+            return View();
+        }
+
     }
 }

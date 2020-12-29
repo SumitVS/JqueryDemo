@@ -6,28 +6,76 @@
 <h2>AttributeSelector</h2>
 
 <script>
-    //Selects all elements with title attribute and sets 5px solid red border
+
     $(document).ready(function () {
-        $("[title]").css("border", "5px solid red");
+        //Selects all elements with title attribute and sets 5px solid red border
+        //$("[title]").css("border", "5px solid red");
+
+        //Selects all div elements with title attribute and sets 5px solid red border
+        //$("div[title]").css("border", "5px solid red");
+
+        //Selects all elements with title attribute value - div1Title, and sets 5px solid red border
+        //$("[title=\"div1Title\"]").css("border", "5px solid red");
+
+        //Selects all div elements with title attribute value - div1Title, and sets 5px solid red border
+        //$("div[title=\"div1Title\"]").css("border", "5px solid red");
+
+
+
     });
 </script>
-<div title="div1Title">
-    DIV 1
+@*<div title="div1Title">
+        DIV 1
+    </div>
+    <br />
+    <div title="div2Title">
+        DIV 2
+    </div>
+    <p title="pTitle">
+        This is a paragraph
+    </p>
+    <span title="div1Title">
+        SAPN 1
+    </span>
+    <br />
+    <br />
+    <span>
+        SPAN 2
+    </span>*@
+
+<script>
+    $(document).ready(function () {
+        //Selects all div elements with both title and style attributes, and sets 5px solid black border
+        //$("div[title][style]").css("border", "5px solid black");
+
+        //Selects all div elements with title attribute value - divTitle, and style attribute value - background -
+        //    color: red, and sets 5px solid black border
+
+        //$("div[title=\"divTitle\"][style=\"background-color:red\"]").css("border", "5px solid black");
+
+        //Selects all div elements with either title or style attributes, and sets 5px solid black border
+        $("div[title],div[style]").css("border", "5px solid black");
+    });
+</script>
+<div title="divTitle" style="background-color:red">
+    Red DIV
 </div>
 <br />
-<div title="div2Title">
-    DIV 2
+<div title="divTitle" style="background-color:green">
+    Green DIV
 </div>
-<p title="pTitle">
-    This is a paragraph
-</p>
-<span title="div1Title">
-    SAPN 1
+<br />
+<div title="divTitle">
+    Normal Div
+</div>
+<span title="divTitle" style="background-color:red">
+    span title with value divTitle
 </span>
 <br />
-<br />
-<span>
-    SPAN 2
-</span>
+<div>
+    Normal Div without any attributes
+</div>
+
+
 
 

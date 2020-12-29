@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "AttributeValueSelector";
+}
+
+<h2>AttributeValueSelector</h2>
+<script>
+    $(document).ready(function () {
+        //Selects all elements that have title attribute value equal to div1Title and sets 5px solid red border
+        //$("[title=\"div1Title\"]").css("border", "5px solid red");
+
+        //Selects all div elements that have title attribute value not equal to div1Title and sets 5px solid red borde
+        //$("[title!='div1Title']").css("border", "5px solid red");
+
+        //Selects all elements that have title attribute value containing the given substring - Title, and sets 5px solid red border
+        //$("[title*='Title']").css("border", "5px solid red");
+
+        //Selects all elements that have title attribute value containing the given word - mySpan, delimited by spaces, and sets 5px solid red border
+       // $("[title~='mySpan']").css("border", "5px solid red");
+
+        //Selects all elements that have title attribute value equal to myTitle or starting with myTitle followed by a hyphen (-)
+        //and sets 5px solid red border
+        //$("[title|='myTitle']").css("border", "5px solid red");
+
+        //Selects all elements that have title attribute value starting with div and sets 5px solid red border
+       // $("[title^='div']").css("border", "5px solid red");
+
+        //Selects all elements that have title attribute value ending with Heading and sets 5px solid red border
+        $("[title$='Heading']").css("border", "5px solid red");
+
+    });
+</script>
+<div title="div1Title">
+    DIV 1
+</div>
+<br />
+<div title="div2Title">
+    DIV 2
+</div>
+<p title="myTitle-paragraph">
+    This is a paragraph
+</p>
+<p title="myTitleHeading">
+    This is a paragraph
+</p>
+<span title="div1Title">
+    SAPN 1
+</span>
+<br />
+<br />
+<span title="mySpan Heading">
+    SPAN 2
+</span>
+

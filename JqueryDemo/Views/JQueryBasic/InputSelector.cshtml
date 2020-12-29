@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "InputSelector";
+}
+
+<h2>InputSelector</h2>
+<script>
+    $(document).ready(function () {
+        //Select all elements from the page and display its value in alert box
+        //$(":input").each(function () {
+        //    alert($(this).val());
+        //});
+
+        //Select all input elements from the page and display its value in alert box
+        //$("input").each(function () {
+        //    alert($(this).val());
+        //});
+
+    //Select all textboxes form the page and display its value in alert box
+        $("input[type='text']").each(function () {
+            alert($(this).val());
+        });
+
+
+
+    });
+</script>
+First Name :
+<input type="text" value="John" />
+<br />
+<br />
+    Last Name :
+<input type="text" value="Major" />
+<br />
+<br />
+    Gender :
+<input type="radio" name="gender" checked="checked" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<br />
+<br />
+    Skills :
+<input type="checkbox" name="skills" checked="checked"
+       value="JavaScript" />JavaScript
+<input type="checkbox" name="skills" checked="checked"
+       value="jQuery" />jQuery
+<input type="checkbox" name="skills" value="C#" />C#
+<br />
+<br />
+    Country:
+<select>
+    <option selected="selected" value="USA">USA</option>
+    <option value="India">India</option>
+    <option value="UK">UK</option>
+</select>
+<br />
+<br />
+    Summary :
+<br />
+<textarea>
+        I am a Senior Dot Net Developer with 10 years experience
+    </textarea>
+<br />
+<br />
+<input type="submit" value="submit" />
+

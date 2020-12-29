@@ -242,6 +242,15 @@
     <Content Include="Views\JQueryBasic\ElementSelector.cshtml" />
     <Content Include="Views\JQueryBasic\ClassSelector.cshtml" />
     <Content Include="Views\JQueryBasic\AttributeSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\AttributeValueSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\CaseInsensitiveAttributeValueSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\InputSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\CheckedSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\CheckboxGroupSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\SelectedSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\DisabledEnabledSelector.cshtml" />
+    <Content Include="Views\JQueryBasic\each.cshtml" />
+    <Content Include="Views\JQueryBasic\MethodChaining.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "SelectedSelector";
+}
+
+<h2>SelectedSelector</h2>
+
+<script>
+    $(document).ready(function () {
+        $("#selectCountry").change(function () {
+            var selectedItem = $("#selectCountry option:selected");
+            $("#divResult1").html("Value= " + selectedItem.val() + " Text= " + selectedItem.text());
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#selectCountries").change(function () {
+            var selectedItems = $("#selectCountries option:selected");
+            if (selectedItems.length > 0) {
+                var resultStirng = "</br>";
+                selectedItems.each(function () {
+                    resultStirng += "value= " + $(this).val() + " Text= " + $(this).text() + "</br>";
+                });
+            }
+            $("#divResult2").html(resultStirng);
+        });
+    });
+</script>
+
+ Country:
+<select id="selectCountry">
+    <option selected="selected" value="USA">United States</option>
+    <option value="IND">India</option>
+    <option value="UK">United Kingdom</option>
+    <option value="CA">Canada</option>
+    <option value="AU">Australia</option>
+</select>
+<br />
+<br />
+<div id="divResult1"></div>
+
+
+
+<select id="selectCountries" multiple="multiple">
+    <option selected="selected" value="USA">United States</option>
+    <option value="IND">India</option>
+    <option value="UK">United Kingdom</option>
+    <option value="CA">Canada</option>
+    <option value="AU">Australia</option>
+</select>
+<br />
+<br />
+<div id="divResult2"></div>
+

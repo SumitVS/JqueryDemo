@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "CaseInsensitiveAttributeValueSelector";
+}
+
+<h2>CaseInsensitiveAttributeValueSelector</h2>
+
+<script>
+    $(document).ready(function () {       
+
+//Select all elements which have div tag and title attribute with value DivTitle case in sensitive
+        //$("div[title]").filter(function () {
+        //    return $(this).attr("title").toLowerCase() == "divtitle";
+        //}).css("border", "5px solid red");
+
+        //Select all elements which have div tag and title attribute with value contains substirng Div case in sensitive
+        //$("div[title]").filter(function () {
+        //    return (/div/i).test($(this).attr("title"))
+        //}).css("border", "5px solid red");
+
+        $("div[title]").filter(function () {
+            return RegExp("div", "i").test($(this).attr("title"));
+        }).css("border", "5px solid red");
+
+    });
+</script>
+<div title="DivTitle">
+    DIV 1
+</div>
+<br />
+<div title="DIVTITLE">
+    DIV 2
+</div>
+<br />
+<div title="divtitle">
+    DIV 3
+</div>
+

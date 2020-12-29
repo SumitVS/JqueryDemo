@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "CheckedSelector";
+}
+
+<h2>CheckedSelector</h2>
+
+<script>
+    $(document).ready(function () {
+        $("#btnRadioSubmit").click(function () {
+            var Result = $("input[type='radio']:checked");
+            if (Result.length > 0) {
+                $("#divRadioResult").html(Result.val() + " is selected");
+            }
+            else {
+                $("#divRadioResult").html("Nothing is selected");
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        var btn = $("#btnCheckboxSubmit");
+        if(btn.length>0)
+            btn.click(function () {
+                var Result = $("input[type='checkbox']:checked");
+                if (Result.length > 0) {
+                    var ResultString = Result.length + " checkbox(es) selected </br>";
+                    Result.each(function () {
+                        ResultString += $(this).val() + "</br>";
+                    });
+
+                    $("#divCheckboxResult").html(ResultString);
+                }
+                else {
+                    $("#divCheckboxResult").html("Nothing is selected");
+                }
+        });
+    });
+</script>
+
+Gender :
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<br />
+<br />
+<input id="btnRadioSubmit" type="submit" value="submit" />
+<br />
+<br />
+<div id="divRadioResult">
+</div>
+
+
+
+  Skills :
+<input type="checkbox" name="skills" value="JavaScript" />JavaScript
+<input type="checkbox" name="skills" value="jQuery" />jQuery
+<input type="checkbox" name="skills" value="C#" />C#
+<input type="checkbox" name="skills" value="VB" />VB
+<br />
+<br />
+<input id="btnCheckboxSubmit" type="submit" value="submit" />
+<br />
+<br />
+<div id="divCheckboxResult">
+</div>
+
