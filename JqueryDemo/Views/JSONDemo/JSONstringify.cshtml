@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "JSONstringify";
+}
+
+<h2>JSONstringify</h2>
+
+<script>
+    $(document).ready(function () {
+        var jsonEmployee = [{
+            "firstName": "Sumit",
+            "lastName": "Shitole",
+            "gender": "Male",
+            "salary": 46000
+        },
+        {
+            "firstName": "Varsha",
+            "lastName": "Shitole",
+            "gender": "Female",
+            "salary": 48000
+        }]
+
+        //converts json object to json string
+        var JsonString = JSON.stringify(jsonEmployee);
+        $("#divJsonString").html(JsonString);
+
+         //converts json string to json object
+        //JsonString = '[{"firstName":"Sumit","lastName":"Shitole","gender":"Male","salary":46000},{"firstName":"Varsha","lastName":"Shitole","gender":"Female","salary":48000}]';
+
+        var JsonObject = JSON.parse(JsonString);
+        var ResultString = "";
+        $.each(JsonObject, function (i, item) {
+            ResultString += "First Name= " + item.firstName + "<br/>";
+            ResultString += "Last Name= " + item.lastName + "<br/>";
+            ResultString += "Gender= " + item.gender + "<br/>";
+            ResultString += "Salary= " + item.salary + "<br/><br/>";
+        });
+        $("#divJsonObject").html(ResultString);
+
+    });
+</script>
+<div id="divJsonString"></div>
+<div id="divJsonObject"></div>
+

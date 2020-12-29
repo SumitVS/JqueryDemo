@@ -168,17 +168,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DOMManipulationMethodsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JSONDemoController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\Home\JQueryBasicController.cs" />
+    <Compile Include="Controllers\JQueryBasicController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -251,6 +254,10 @@
     <Content Include="Views\JQueryBasic\DisabledEnabledSelector.cshtml" />
     <Content Include="Views\JQueryBasic\each.cshtml" />
     <Content Include="Views\JQueryBasic\MethodChaining.cshtml" />
+    <Content Include="Views\JSONDemo\JSONObjectAndJSONArray.cshtml" />
+    <Content Include="Views\JSONDemo\JSONstringify.cshtml" />
+    <Content Include="Views\JSONDemo\DotNetToJson.cshtml" />
+    <Content Include="Views\DOMManipulationMethods\attrAndremoveattrMethods.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

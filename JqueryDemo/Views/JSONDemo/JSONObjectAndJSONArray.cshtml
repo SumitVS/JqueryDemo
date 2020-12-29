@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "JSONObjectAndJSONArray";
+}
+
+<h2>JSONObjectAndJSONArray</h2>
+<script>
+    $(document).ready(function () {
+        var jsonEmployee = {
+            "firstName": "Sumit",
+            "lastName": "Shitole",
+            "gender": "Male",
+            "salary": 46000
+        }
+
+        var jsonObjectString = "";
+        jsonObjectString += "First Name= " + jsonEmployee.firstName + "<br/>";
+        jsonObjectString += "Last Name= " + jsonEmployee.lastName + "<br/>";
+        jsonObjectString += "Gender= " + jsonEmployee.gender + "<br/>";
+        jsonObjectString += "Salary= " + jsonEmployee.salary + "<br/>";
+
+        $("#divJsonObject").html(jsonObjectString);
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        var jsonEmployee = [{
+            "firstName": "Sumit",
+            "lastName": "Shitole",
+            "gender": "Male",
+            "salary": 46000
+        },
+        {
+            "firstName": "Varsha",
+            "lastName": "Shitole",
+            "gender": "Female",
+            "salary": 48000
+        }]
+
+
+        var jsonObjectString = "";
+        $.each(jsonEmployee, function (i, item) {
+            jsonObjectString += "First Name= " + item.firstName + "<br/>";
+            jsonObjectString += "Last Name= " + item.lastName + "<br/>";
+            jsonObjectString += "Gender= " + item.gender + "<br/>";
+            jsonObjectString += "Salary= " + item.salary + "<br/><br/>";
+        });
+       JSON.stringify
+
+        $("#divJsonObjectArray").html(jsonObjectString);
+    });
+</script>
+<div id="divJsonObject"></div>
+<div id="divJsonObjectArray"></div>
+
