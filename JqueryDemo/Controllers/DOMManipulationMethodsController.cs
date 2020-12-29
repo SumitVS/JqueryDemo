@@ -13,5 +13,15 @@ namespace JqueryDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult appendprependMethod()
+        {
+            return View();
+        }
+
+        public ActionResult afterbeforeMethod()
+        {
+            return View();
+        }
     }
 }

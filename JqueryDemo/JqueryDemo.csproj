@@ -258,6 +258,8 @@
     <Content Include="Views\JSONDemo\JSONstringify.cshtml" />
     <Content Include="Views\JSONDemo\DotNetToJson.cshtml" />
     <Content Include="Views\DOMManipulationMethods\attrAndremoveattrMethods.cshtml" />
+    <Content Include="Views\DOMManipulationMethods\appendprependMethod.cshtml" />
+    <Content Include="Views\DOMManipulationMethods\afterbeforeMethod.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

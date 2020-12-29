@@ -4,4 +4,37 @@
 }
 
 <h2>attrAndremoveattrMethods</h2>
+<script>
+    $(document).ready(function () {
+        //Add attributes to all the div
+        $("div").attr({
+            "title": "My Title",
+            "style": "border:5px solid red",
+            "name":"my Div"
+        });
+        var resultString = "";
+        $("div").each(function () {
+            resultString += "Title= " + $(this).attr("title") + "<br/>";
+            resultString += "style= " + $(this).attr("style") + "<br/>";
+            resultString += "name= " + $(this).attr("name") + "<br/><br/>";
+        });
 
+        $("#divResult1").html(resultString);
+
+
+        //remove title Attributes form all the div
+        resultString = "No of div's with title attribute are= " + $("div[title]").length + "<br/>";
+        resultString += "Removing title attributes<br/>";
+        $("div[title]").each(function () {
+            $(this).removeAttr("title");
+            $(this).removeAttr("style");
+        });
+        
+        resultString += "No of div's with title attribute are= " + $("div[title]").length + "<br/>";
+        $("#divResult2").html(resultString);
+    });
+</script>
+<div title="Div1">DIV 1</div>
+<div title="Div2">DIV 2</div>
+<div id="divResult1"> </div>
+<div id="divResult2"> </div>
